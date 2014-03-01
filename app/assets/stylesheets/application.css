@@ -11,4 +11,8 @@
  *= require_self
  *= require_tree .
  *= require reset
-*/
+*/ 
+
+.anynines_link {
+	color: #e84 !important;
+}

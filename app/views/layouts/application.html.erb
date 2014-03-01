@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Paperclip Demo</title>
+  <title>Paperclip Demo on anynines.com</title>
   <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <%= stylesheet_link_tag 'application', :media => 'all' %>
   <%= csrf_meta_tags %>
@@ -9,7 +9,7 @@
 <body>
   <header>
     <div class="header-wrap">
-      <h1><%= link_to 'Paperclip Demo', root_path %></h1>
+      <h1><%= link_to 'Paperclip Demo', root_path %> on <%=link_to 'anynines.com', "http://anynines.com", class: "anynines_link" %></h1>
       <%= link_to 'Fork me on github', 'https://github.com/thoughtbot/paperclip_demo', target: 'blank', class: 'fork_me' %>
     </div>
   </header>
@@ -20,6 +20,7 @@
 
   <footer>
     <p id="copyright">© 2012 thoughtbot, inc. The <em>design of a robot</em> and <em>thoughtbot</em> are registered trademarks of <%= link_to 'thoughtbot, inc', 'http://thoughtbot.com', target: 'blank' %>.</p>
+	<p>This adjusted sample uses the <a href="https://github.com/anynines/cf_swift_service">anynines Swift service</a> for storing and retrieving images.</p>
   </footer>
   <%= javascript_include_tag "application" %>
 </body>
