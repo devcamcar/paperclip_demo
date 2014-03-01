@@ -1,0 +1,20 @@
+---
+applications:
+- name: app_name
+  memory: 512M
+  instances: 1
+  host: app_name
+  domain: de.a9sapp.eu
+  buildpack: https://github.com/cloudfoundry/heroku-buildpack-ruby.git
+  path: .
+  services:
+    postgresql-app_name:
+      label: postgresql
+      provider: core
+      version: '9.1'
+      plan: '100'
+    swift-app_name:
+      label: swift
+      provider: core
+      version: '1.0'
+      plan: free

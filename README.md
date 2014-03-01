@@ -10,7 +10,7 @@ Application allows users to manage a list of “friends” using a basic Rails s
 
 Clone the git repository
 
-    $ git clone git@github.com:thoughtbot/paperclip_demo.git
+    $ git clone git@github.com:anynines/paperclip_demo.git
     $ cd paperclip_demo
     $ bundle
 
@@ -26,29 +26,22 @@ Run the rails server
 
 From a web browser access the site via [localhost:3000](http://localhost:3000)
 
-## Deploy the application to Heroku
+## Deploy the application to Anynines
 
-Create an application container on Heroku
+Precompile the assets locally to speed up the process
 
-    $ heroku create
+    $ bundle exec rake assets:precompile
 
-Push the code to the Heroku container
+Install the a9s gem
 
-    $ git push heroku master
+    $ gem install a9s
 
-Run any database migrations
+Edit the deployment manifest
 
-    $ heroku rake db:migrate
+    $ vim manifest.yml -> exchange all occurences of app_name with your desired application identifier
 
-Set the AWS S3 config vars
-
-    $ heroku config:add AWS_BUCKET=your_bucket_name
-    $ heroku config:add AWS_ACCESS_KEY_ID=your_access_key_id
-    $ heroku config:add AWS_SECRET_ACCESS_KEY=your_secret_access_key
-    
-Now view your Heroku application
-
-    $ heroku open
+Deploy the application 
+    $ cf push
 
 ## Test suite
 
