@@ -38,6 +38,7 @@ Install the a9s gem
 
 Edit the deployment manifest
 
+    $ cp manifest.yml.example manifest.yml
     $ vim manifest.yml -> exchange all occurences of app_name with your desired application identifier
 
 Deploy the application 
