@@ -41,6 +41,7 @@ Edit the deployment manifest
     $ vim manifest.yml -> exchange all occurences of app_name with your desired application identifier
 
 Deploy the application 
+
     $ cf push
 
 ## Test suite
