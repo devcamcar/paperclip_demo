@@ -3,6 +3,8 @@ $color-2: gainsboro;
 $color-3: #B32216;
 $color-4: #999;
 $color-5: white;
+$color-6: #c00;
+
 
 // Mixins
 // ----------------------------------------
@@ -41,7 +43,7 @@ header {
       padding-left: 80px;
 
       a {
-        color: $color-1;
+        color: $color-6;
       }
     }
   }
