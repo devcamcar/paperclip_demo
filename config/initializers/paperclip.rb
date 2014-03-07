@@ -15,8 +15,8 @@ def create_bucket_if_needed(swift_service)
      :hp_avl_zone => swift_service["credentials"]["availability_zone"]
   })
 
-  if connection.directories.count == 0
-    puts "No buckets found. Creating bucket with key=#{PAPERCLIP_BUCKET_NAME}"
+  if connection.directories.get(PAPERCLIP_BUCKET_NAME).nil?
+    puts "The bucket with key=#{PAPERCLIP_BUCKET_NAME} wasn't found. Creating bucket with key=#{PAPERCLIP_BUCKET_NAME}"
     bucket = connection.directories.create key: PAPERCLIP_BUCKET_NAME 
 
     # set the directory to be public
