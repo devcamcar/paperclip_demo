@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    a9s_swift (0.1.1)
     actionmailer (4.0.2)
       actionpack (= 4.0.2)
       mail (~> 2.5.4)
@@ -156,6 +157,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  a9s_swift
   capybara
   coffee-rails
   fog
