@@ -7,6 +7,7 @@ gem 'rails', '~> 4.0.0'
 group :production do
   gem 'rails_12factor'
   gem 'fog'
+  gem 'a9s_swift' # a9s swift utilities
 end
 
 gem 'coffee-rails'
