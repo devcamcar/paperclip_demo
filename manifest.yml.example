@@ -12,7 +12,7 @@ applications:
       label: postgresql
       provider: core
       version: '9.1'
-      plan: '100'
+      plan: Pluto-free
     swift-app_name:
       label: swift
       provider: core
