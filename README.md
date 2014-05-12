@@ -16,11 +16,11 @@ Clone the git repository
 
 Create database and run migrations
 
-    $ rake db:create db:migrate
+    $ bundle exec rake db:create db:migrate
 
 Run the rails server
 
-    $ rails s
+    $ bundle exec rails s
 
 ### View Application
 
@@ -28,9 +28,12 @@ From a web browser access the site via [localhost:3000](http://localhost:3000)
 
 ## Deploy the application to Anynines
 
-Precompile the assets locally to speed up the process
+### Service Dependencies
 
-    $ bundle exec rake assets:precompile
++ PostgreSQL service
++ Anynines Swift service
+
+### Ruby cli (v5)
 
 Install the a9s gem
 
@@ -39,18 +42,39 @@ Install the a9s gem
 Edit the deployment manifest
 
     $ cp manifest.yml.example manifest.yml
-    $ vim manifest.yml -> exchange all occurences of app_name with your desired application identifier
+    $ vim manifest.yml # exchange all occurences of app_name with your desired application identifier
 
-Deploy the application 
+Deploy the application
 
     $ cf push
+
+### Go cli (v6)
+
+Install the cf go cli: https://github.com/cloudfoundry/cli/releases
+
+Edit the deployment manifest
+
+    $ cp manifest.yml.v6 manifest.yml
+    $ vim manifest.yml # exchange all occurences of app_name with your desired application identifier
+
+Create the needed services
+
+    $ cf create-service postgresql Pluto-free postgresql-app_name
+    $ cf create-service swift free swift-app_name
+
+Deploy the application
+
+    $ cf push
+    
+Visit the application url: http://app_name.de.a9sapp.eu .
+
 
 ## Test suite
 
 RSpec and Capybara used for Integration and Unit tests
 
     $ rspec
-    
+
 Credits
 -------
 
