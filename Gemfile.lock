@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    a9s_swift (0.1.1)
+    a9s_swift (0.2.0)
     actionmailer (4.0.2)
       actionpack (= 4.0.2)
       mail (~> 2.5.4)
