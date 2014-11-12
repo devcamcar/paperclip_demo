@@ -20,3 +20,5 @@
 .DS_Store
 manifest.yml
 public/assets
+.ruby-version
+.ruby-gemset
