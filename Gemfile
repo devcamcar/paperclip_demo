@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.3'
 
-gem 'rails', '~> 4.0.0'
+gem 'rails', '~> 4.1.7'
 
 group :production do
   gem 'rails_12factor'
-  gem 'fog'
+  gem 'fog', git: 'https://github.com/fog/fog.git', branch: 'master'
   gem 'a9s_swift' # a9s swift utilities
 end
 
